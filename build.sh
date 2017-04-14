@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build . -t pytest
+docker build . -t ikudlay/survey-application
