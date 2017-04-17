@@ -14,4 +14,4 @@ WORKDIR /webapp
 # Expose port 8000 for uwsgi
 EXPOSE 8000
  
-CMD     envsubst < /webapp/config.yaml.tpl > /webapp/config.yaml; uwsgi --plugin http,python --http 0.0.0.0:8000 --module app:app --processes 1 --threads  8 
+CMD     envsubst < /webapp/config.yaml.tpl > /webapp/config.yaml; uwsgi --plugin http,python --http 0.0.0.0:8000 --module app:app --processes 1 --threads  8 --uid noroot --gid noroot
